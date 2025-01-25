@@ -5,7 +5,7 @@ windows:
 linux:
 	cargo build  --release	
 macos:
-	cargo build --target x86_64-apple-darwin --release
+	cargo zigbuild --target x86_64-apple-darwin --release
 freebsd:
 	cargo build  --release	
 default: linux
