@@ -19,3 +19,6 @@ make linux
 wget https://github.com/dryzig/zig-debian/releases/download/0.6.0-1/zig_0.6.0-1_amd64.deb
 ```
 https://actually.fyi/posts/zig-makes-rust-cross-compilation-just-work/
+```
+export PATH=$PATH:/home/veto/webs/hello_rust/zig
+```
