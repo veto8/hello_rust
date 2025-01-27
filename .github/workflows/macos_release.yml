@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   # Single deploy job since we're just deploying
-  build_linux_windows:
+  build:
     if: github.repository_owner == 'myridia'
     runs-on: ubuntu-latest   
     steps:
@@ -37,6 +37,7 @@ jobs:
         run: |
           rustup target add x86_64-apple-darwin 
           rustup target add aarch64-apple-darwin
+          cargo install --locked cargo-zigbuild
           
       - name: compile macos
         run: |
@@ -51,7 +52,7 @@ jobs:
         run: |
           cp target/x86_64-apple-darwin/release/hello_rust target/x86_64-apple-darwin/release/hello_rust_macos_intel
   
-      - name: Upload Linux Binary to release
+      - name: Upload Binary to release
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
