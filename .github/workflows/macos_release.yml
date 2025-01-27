@@ -20,7 +20,7 @@ jobs:
     if: github.repository_owner == 'myridia'
     runs-on: ubuntu-latest   
     steps:
-      - name: Install Dependencies
+      - name: install dependencies
         run: |
          sudo apt-get install curl build-essential gcc make mingw-w64 -y
          sudo apt-get install rustc cargo gzip -y
@@ -41,9 +41,9 @@ jobs:
           
       - name: compile macos
         run: |
-          cargo zigbuild --target x86_64-apple-darwin --releas
+          cargo zigbuild --target x86_64-apple-darwin --release
           
-      - name: List binary
+      - name: list binary
         run: |
           ls target/x86_64-apple-darwin/release
        
@@ -52,7 +52,7 @@ jobs:
         run: |
           cp target/x86_64-apple-darwin/release/hello_rust target/x86_64-apple-darwin/release/hello_rust_macos_intel
   
-      - name: Upload Binary to release
+      - name: upload binary to release
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
