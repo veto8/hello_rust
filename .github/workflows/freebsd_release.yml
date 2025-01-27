@@ -17,7 +17,7 @@ permissions:
 
 jobs:
   build_freebsd:
-    if: github.repository_owner == 'myridiax'
+    if: github.repository_owner == 'myridia'
     runs-on: ubuntu-latest
     name: A job to run FreeBSD
     env:
