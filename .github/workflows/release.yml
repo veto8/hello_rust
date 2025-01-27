@@ -52,28 +52,7 @@ jobs:
           ls target/x86_64-pc-windows-gnu/release
           ls target/x86_64-unknown-linux-gnu/release
           
-      - name: rename binaries 
-        run: |
-          cp target/x86_64-unknown-linux-gnu/release/hello_rust target/x86_64-unknown-linux-gnu/release/hello_rust_linux
-          cp target/x86_64-pc-windows-gnu/release/hello_rust.exe target/x86_64-pc-windows-gnu/release/hello_rust.exe
 
-      - name: Upload Linux Binary to release
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: 'target/x86_64-unknown-linux-gnu/release/hello_rust_linux'
-          tag: ${{ github.ref }}
-          overwrite: true
-          file_glob: true
-
-      - name: Upload Windows Binary to release
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: 'target/x86_64-pc-windows-gnu/release/hello_rust.exe'
-          tag: ${{ github.ref }}
-          overwrite: true
-          file_glob: true
           
 
         
