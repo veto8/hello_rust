@@ -56,5 +56,5 @@ jobs:
       - name: rename binaries 
         run: |
           cp target/x86_64-unknown-linux-gnu/release/hello_rust target/x86_64-unknown-linux-gnu/release/hello_rust_linux
-        
+          cp target/x86_64-pc-windows-gnu/release/hello_rust.exe target/x86_64-pc-windows-gnu/release/hello_rust_windows.exe
    
