@@ -48,7 +48,7 @@ jobs:
       - name: list binary
         run: |
           ls target/x86_64-apple-darwin/release
-          ls target/aarch64-apple-darwin /release
+          ls target/aarch64-apple-darwin/release
 
       - name: rename binaries 
         run: |
