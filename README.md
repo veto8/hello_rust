@@ -23,7 +23,7 @@ dpkg -i zig_0.6.0-1_amd64.deb
 check the last zig https://ziglang.org/download/
 
 ```
-wget -c  https://ziglang.org/builds/zig-linux-x86_64-0.14.0-dev.3385+055969b10.tar.x
+wget -c   https://ziglang.org/builds/zig-linux-x86_64-0.14.0-dev.3385+055969b10.tar.xz
 tar -xvf zig*.tar.xz
 rm *.xz
 mv zig-* zig
