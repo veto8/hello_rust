@@ -6,6 +6,8 @@ endif
 
 windows:
 	cargo build --target x86_64-pc-windows-gnu --release
+windows32:
+	cargo build --target i686-pc-windows-gnu --release
 linux:
 	cargo build  --release	
 macos:
