@@ -19,9 +19,11 @@ wget https://github.com/dryzig/zig-debian/releases/download/0.6.0-1/zig_0.6.0-1_
 dpkg -i zig_0.6.0-1_amd64.deb 
 ```
 
-## Get Zig direct via Debian db
+## Get zi 
+check the last zig https://ziglang.org/download/
+
 ```
-wget -c  https://ziglang.org/builds/zig-linux-x86_64-0.14.0-dev.2851+b074fb7dd.tar.xz
+wget -c  https://ziglang.org/builds/zig-linux-x86_64-0.14.0-dev.3385+055969b10.tar.x
 tar -xvf zig*.tar.xz
 rm *.xz
 mv zig-* zig
